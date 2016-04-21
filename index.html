@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SK - JS demo app</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a>
+                        JavaScript Exercises
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="router.showCalculatorSection()">Calculator</a>
+                </li>
+                <li>
+                    <a href="#" onclick="router.showXmlHttpRequestDemoSection()">XMLHttpRequest demo</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+              <div id="page-content-wrapper">
+                  <div class="container-fluid">
+                    <section id="calculator">
+                      <h1 class="text-center" style="margin-right: 80px">Calculator</h1>
+                      <div class="row col-lg-6 col-md-4 col-sm-2" style="margin-top: 80px">
+                          <div class="col-lg-10">
+                              <div class="form-group">
+                                  <label for="firstNumber" class="control-label">First Number</label>
+                                  <input id="firstNumber" type="number" class="form-control" />
+                              </div>
+                              <div class="form-group">
+                                  <label for="secondNumber" class="control-label">Second Number</label>
+                                  <input id="secondNumber" type="number" class="form-control" />
+                              </div>
+                              <div class="form-group">
+                                  <label for="sel1">Select operator:</label>
+                                  <select class="form-control" id="operator">
+                                    <option>+</option>
+                                    <option>-</option>
+                                    <option>/</option>
+                                    <option>*</option>
+                                    <option>Factorial(first number)</option>
+                                  </select>
+                              </div>
+                              <div class="form-group" >
+                                  <button class="btn btn-primary" style="width: 400px" onclick="calculatorHelper.calculate()">Calculate</button>
+                              </div>
+
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-2" style="margin-top: 100px" >
+                          <textarea id="result" class="form-control"  type="number" disabled="disabled" style="font-size: 18pt"   placeholder="Result..."></textarea>
+                      </div>
+                  </section>
+
+                  <section id="XMLHttpRequestDemo">
+                      <h1 class="text-center" style="margin-right: 80px">XMLHttpRequestDemo</h1>
+                      <div class="row" style="margin-top: 60px">
+                          <div class="col-lg-6 col-md-4 col-sm-2">
+                              <table class="table table-striped">
+                                  <thead>
+                                      <tr>
+                                          <th>Title</th>
+                                          <th>Author</th>
+                                          <th>Year</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody id="booksTable">
+                                  </tbody>
+                              </table>
+                          </div>
+
+                      </div>
+                  </section>
+                              </div>
+                          </div>
+                          <!-- /#page-content-wrapper -->
+
+                      </div>
+                      <!-- /#wrapper -->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--SK exercises scripts-->
+
+
+    <script src="js/booksData.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/calculatorHelper.js"></script>
+    <script src="js/main.js"></script>
+    <!-- SK lectures exercises -->
+    <!-- <script src="js/todos.js"></script> -->
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

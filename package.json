@@ -1,0 +1,16 @@
+{
+  "name": "starter_kit_js_app-master",
+  "version": "1.0.0",
+  "engine": "node >= 0.10.0",
+  "description": "[Simple Sidebar](http://startbootstrap.com/template-overviews/simple-sidebar/) is an off canvas sidebar navigation template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).",
+  "dependencies": {
+    "jasmine-core": "2.4.1",
+    "karma": "0.13.22",
+    "karma-chrome-launcher": "0.2.2",
+    "karma-jasmine": "0.3.8",
+    "karma-phantomjs-launcher": "1.0.0",
+    "phantomjs-prebuilt": "2.1.6"
+  },
+  "author": "bkucinsk",
+  "license": "Apache-2.0"
+}
